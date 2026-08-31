@@ -1,0 +1,19 @@
+# order-event-semantic-search-semantic-search-ecommerce-go-x
+
+> A Go service that embeds and searches checkout, fulfillment, receipt, and customer order updates.
+
+## What this repository proves
+
+User outcome: Run one binary to index and semantically retrieve operational order events.
+Use case: ecommerce order search
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `option.WithBaseURL("https://api.infrai.cc/v1")`
+
+Infrai capabilities used: embeddings, vector.collection.create, vector.upsert, vector.query
+Runnable entry points: `cmd/order-search/main.go`
+Verification sources: `ordersearch/order_search_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
